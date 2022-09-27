@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 8081;
 
 app.get('/', async (req, res) => {
   const username = req.query.username || 'myogeshchavan97';
+  console.log(username)
   try {
     const result = await axios.get(
       `https://api.github.com/users/${username}/repos`
